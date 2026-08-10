@@ -2,6 +2,7 @@ const path= require("node:path");
 const fs = require("node:fs");
 const EventEmitter= require("node:events");
 const event = new EventEmitter();
+const os = require("node:os");
 const stream = fs.createReadStream(path.resolve("./data.txt"));
 const writeStream =fs.createWriteStream(path.resolve("./data2.txt"),{flags:"a"});
 
@@ -143,7 +144,14 @@ const writeStream =fs.createWriteStream(path.resolve("./data2.txt"),{flags:"a"})
 // console.log(checkDirectory(path.resolve("../JS Assignment2")));
 
 //===============================================Q17=======================================
+// function getSystemInfo() {
+//     return {
+//         Platform: os.platform(),
+//         Arch: os.arch()
+//     };
+// }
 
+// console.log(getSystemInfo());
 //===============================================Q18=======================================
 
 //  stream.on("data",(chunk)=>{
